@@ -39,8 +39,11 @@ export const AuthProvider: React.FC<any> = ({ children }) => {
 
   const registerMutation = useMutation({
     mutationFn: signUp,
-    onSuccess: (data) => {
+    onSuccess: (data, userData) => {
       alert(data.message);
+      if (data.message === "successfully created user!") {
+        login({ email: userData.email, password: userData.password });
+      }
     },
   });
 
@@ -57,7 +60,6 @@ export const AuthProvider: React.FC<any> = ({ children }) => {
 
   const register = async (userData: newUser) => {
     await registerMutation.mutateAsync(userData);
-    await login({ email: userData.email, password: userData.password });
   };
 
   const login = async (creds: creds) => {
