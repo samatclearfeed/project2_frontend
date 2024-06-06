@@ -2,6 +2,7 @@ import { AuthContext } from "@/context/auth";
 import React, { useState } from "react";
 import { useContext } from "react";
 import classes from "@/styles/login.module.css";
+import Link from "next/link";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -41,6 +42,15 @@ const Login = () => {
           />
         </div>
         <input type="submit" className={classes.button} />
+        <p>
+          Don't have an account?{" "}
+          <Link
+            href="/register"
+            style={{ textDecoration: "none", color: "#0B60B0" }}
+          >
+            Register
+          </Link>
+        </p>
       </form>
     </div>
   );
