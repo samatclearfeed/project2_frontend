@@ -1,0 +1,123 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:800px;
+    margin: 0px auto;
+    color: white;
+    padding: 10px;
+}
+.header button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    color: black;
+    background-color: #F0EDCF;
+    padding: 5px;
+    border-radius: 4px;
+}
+.header button:hover{
+    box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.315);
+}
+.main{
+    width:800px;
+    padding: 10px;
+    margin: 0px auto;
+}
+.taskContent {
+    background-color: #F0EDCF;
+    margin-bottom:20px;
+    padding: 10px;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+}
+.taskContent:hover {
+    box-shadow: 6px 6px 1px #f0edcf42;
+}
+.taskDescription {
+    margin: 10px 0px;
+    font-size: 12px;
+    text-align: justify;
+}
+.taskTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.taskTitle button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:1px;
+    color: red;
+}
+.taskTitle button:hover {
+    transform: scale(1.1);
+}
+.taskInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.modalMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.808);
+    backdrop-filter: blur(2px);
+}
+.modalMain form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0EDCF;
+    gap: 10px;
+    width: fit-content;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 1px #f0edcf42;
+}
+.modalMain form input, .modalMain form select, .modalMain form textarea {
+    width: 400px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.modalMain form button{
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000;
+    color: white;
+    transition-duration: 0.2s;
+}
+.modalMain form button:hover {
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.315);
+    cursor: pointer;
+}
+
+.closeIcon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 20px;
+}
